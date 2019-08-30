@@ -3,8 +3,8 @@ import './Tooltip.css';
 
 function Tooltip(props) {
     return (
-        <span className='Tootip'>
-            <span className='Tooltip-content'>
+        <span className='Tooltip'>
+            <span className='Tooltip-content' style={{ color: props.color }}>
                 {props.children}
             </span>
             <span className='Tooltip-message'>
@@ -14,4 +14,27 @@ function Tooltip(props) {
     )
 }
 
-export default Tooltip;
+class TooltipClass extends React.Component {
+    static defaultProps = {
+        color: '#01A800', // green
+    };
+    render() {
+        console.log('Using a class component!')
+        console.log(this.props)
+        return (
+            <span className='Tooltip'>
+                <span
+                className='Tooltip-content'
+                style={{ color: this.props.color }}
+            >
+                {this.props.children}
+            </span>
+            <div className='Tooltip-message'>
+                {this.props.message}
+            </div>
+        </span>
+        )   
+    }
+}
+
+export default TooltipClass;

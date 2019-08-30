@@ -3,9 +3,6 @@
     cursor: pointer;
 }
 
-.Tooltip-content {
-    color: #01A800;
-}
 
 .Tooltip-message {
     background-color: hsla(0, 0%, 10%, 0.9);
@@ -16,7 +13,7 @@
     margin-left: -8vw;
     min-width: 160px;
     padding: 7px 10px;
-    position: relative;
+    position: absolute;
     text-align: center;
     top: calc(-1.2em - 14px);
     white-space: nowrap;
